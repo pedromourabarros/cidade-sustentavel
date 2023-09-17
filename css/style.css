@@ -34,98 +34,125 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+    color: var(--cor-texto-fundo-preto);
 }
 
-#logo-cabecalho {
-    width: 70px;
-    height: 70px;
-}
-
-#titulo-cabecalho {
-    font-size: 2.8rem;
-    color: var(--cor-verde);
-    margin-left: 1rem;
-}
-
-#titulo-cabecalho-mobile {
-    display: none;
-    font-size: 2.8rem;
-    color: var(--cor-verde);
-}
-
-/* Estilos do menu desktop */
-#menu-desktop ul {
-    list-style-type: none;
+/* Estilos do menu de navegação */
+#menu-desktop {
+    /* Menu de navegação para desktop */
     display: flex;
-    gap: 2rem;
-    margin-right: 2rem;
+    justify-content: right;
+    margin-top: 9rem;
 }
 
+#menu-desktop ul {
+    display: flex;
+    list-style: none;
+
+}
 #menu-desktop ul li {
-    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #menu-desktop ul li a {
+    padding: 2.5rem;
+    list-style: none;
+    font-size: 2rem;
     text-decoration: none;
-    color: var(--cor-verde);
-    transition: color 0.3s ease-in-out;
+    color: var(--cor-texto);
+
+    
 }
 
 #menu-desktop ul li a:hover {
-    color: white;
+    background-color: #3a3a3a;
 }
 
-/* Estilos do menu mobile */
-.menu-mobile.open {
-    display: block;
-}
-
-.menu-mobile.close {
+.menu-mobile{
     display: none;
 }
 
-/* Outros estilos específicos para dispositivos móveis podem ser adicionados aqui */
+#titulo-cabecalho{
+    color: var(--cor-texto);
+    font-size: 4.5rem;
+}
 
-/* Estilos do conteúdo principal */
-#main {
-    grid-column: 1/13;
-    background-image: url('./img/fundo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+#titulo-cabecalho-mobile{
+    display: none;
+}
+
+#logo-cabecalho {
+    max-width: 15rem;
+    border-radius: 50%;
+    margin: 1rem 0 1rem 2rem;
+}
+
+.box-menu-mobile{
+    display: none;
+}
+
+.linha1-menu,
+.linha2-menu,
+.linha3-menu{
+    width: 5.5rem;
+    height: 0.5rem;
+    background-color: white;
+}
+
+
+
+/* Home */
+
+.containeir-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: var(--cor-texto-fundo-preto);
-    padding: 5rem 2rem;
-    text-align: center;
+}
+
+main {
+    grid-column: 1/13;
+    grid-row: 2/7;
+    background-image: url(../img/imgg.jpg);
+    background-size: 100%;
+    height: 100%;
+    color: var(--cor-texto);
+    background-repeat: no-repeat;
+    max-width: 100%;
 }
 
 #titulo-home {
-    font-size: 6rem;
-    margin-bottom: 1rem;
+    font-size: 7rem;
+    margin-top: 15rem;
 }
 
 #sub-home {
-    font-size: 2.8rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    width: 120rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-projeto {
+    font-size: 2rem;
+    margin-top: 10rem;
 }
 
 .btn-projeto a {
-    display: inline-block;
-    background-color: var(--cor-verde);
-    color: white;
-    padding: 1rem 2rem;
+    color: var(--cor-texto);
     text-decoration: none;
-    font-size: 2rem;
-    border-radius: 5px;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.541);
+    border-radius: 3rem;
 }
 
 .btn-projeto a:hover {
-    background-color: #005a17;
+    background-color: black;
+    font-size: 2.2rem;
+    transition: 0.2s;
 }
-
 
 /* Problema */
 .problema {
@@ -505,7 +532,7 @@ footer img{
 }
 }
 
-@media screen and (max-width: 1275px) {
+@media screen and (max-width: 768px) {
     #menu-desktop {
         display: none;
     }
